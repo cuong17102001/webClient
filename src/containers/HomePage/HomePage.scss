@@ -1,0 +1,52 @@
+.slick-slider{
+    position: relative;
+
+    .slick-arrow{
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        padding-top: 10px;
+        align-items: center;
+    }
+
+    .slick-prev{
+        position: absolute !important;
+    }
+
+    .slick-next{
+        position: absolute !important;
+    }
+
+    
+}
+
+.slider{
+
+    height: 300px;
+    display: flex;
+    align-items: center;
+    
+
+    .slider-title{
+        font-size: 30px;
+        margin: 10px auto;
+        font-weight: bold;
+    }
+
+    width: 100%;
+    .slider-item{
+        height: 150px;
+        :hover{
+            cursor: pointer;
+            color: rgb(212, 144, 56);
+        }
+        .slider-img{
+            height: 90%;
+            margin: auto;
+            width: 90%;
+        }
+        .slider-item-title{
+            text-align: center;
+        }
+    }
+}

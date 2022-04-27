@@ -3,6 +3,7 @@ import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 
 import {Button , Modal , ModalHeader , ModalBody ,ModalFooter ,Form, FormGroup, Label, Input, FormText} from "reactstrap";
+import {emitter} from '../../utils/emitter';
 class ModalUser extends Component {
 
     constructor(props){
@@ -17,6 +18,23 @@ class ModalUser extends Component {
             gender: 0,
             role: 1
         }
+
+        this.listenToEmitter();
+    }
+
+    listenToEmitter(){
+        emitter.on('CLEAR_STATE_DATA' , ()=>{
+            this.setState({
+                email : '',
+                password: '',
+                firstname:'',
+                lastname:'',
+                address:'',
+                phonenumber:'',
+                gender: 0,
+                role: 1
+            })
+        })
     }
 
     componentDidMount() {

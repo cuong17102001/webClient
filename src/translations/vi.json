@@ -1,4 +1,8 @@
 {
+    "home-header" :{
+        "speciality" : "Chuyên Khoa",
+        "searchdoctor" : "Tìm bác sĩ theo chuyên khoa"
+    },
     "common": {
         "add": "Thêm",
         "edit": "Sửa",
@@ -26,12 +30,16 @@
         "userpass-wrong": "Sai tên đăng nhập hoặc mật khẩu!"
     },
     "menu": {
+
+        "user-manage" : "quản lý người dùng",
+
         "system": {
             "header": "Hệ thống",
             "system-administrator": {
                 "header": "Quản trị hệ thống",
                 "user-manage": "Quản lý người sử dụng",
-                "product-manage": "Quản lý gói",
+                "user-redux": "Quản lý người dùng redux",
+                "doctor-manage" : "Quản lý bác sĩ",
                 "register-package-group-or-account": "Đăng ký gói dịch vụ cho nhóm/tài khoản"
             },
             "system-parameter": {

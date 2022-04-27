@@ -11,8 +11,21 @@ const getAllUsers = (id) =>{
 const addNewUserService = (data) =>{
     return axios.post(`/api/create-new-user`,data);
 }
+
+const deleteUserService = (id) =>{
+    // return axios.delete(`/api/delete-user`,{id});
+    return axios.delete('/api/delete-user', {
+        // headers: {
+        //   Authorization: authorizationToken
+        // },
+        data: {
+          id: id
+        }
+      });
+}
 export {
     handleLoginApi,
     getAllUsers,
-    addNewUserService
+    addNewUserService,
+    deleteUserService
 }
