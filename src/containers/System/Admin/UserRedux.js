@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import {userAllCodeService} from "../../../services/userService";
 import * as actions from "../../../store/actions";
 import "./UserRedux.scss"
+import CommonUtils from  '../../../utils/CommonUtils'
 
 class UserRedux extends Component {
 
@@ -70,15 +71,16 @@ class UserRedux extends Component {
         }
     }
 
-    handleOnChangeImg = (event) =>{
+    handleOnChangeImg = async (event) =>{
         let data = event.target.files
         let file = data[0]
         
         if (file) {
+            const base64 = await CommonUtils.getBase64(file)
             const objectUrl = URL.createObjectURL(file)
             this.setState({
                 previewImg : objectUrl,
-                avatar : file
+                avatar : base64
             }) 
         }
     }
@@ -96,7 +98,8 @@ class UserRedux extends Component {
             phonenumber: this.state.phoneNumber,
             gender: this.state.gender,
             role: this.state.role,
-            position: this.state.position
+            position: this.state.position,
+            image : this.state.avatar
         })
     }
 
